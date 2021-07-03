@@ -38,25 +38,14 @@ import companyQuery from '~/graphql/queries/company.gql'
       showToast,
       clearToasts
     }
+  },
+  async asyncData({ app }) {
+    const missions = await app.$axios.$get('https://api.spacex.land/rest/missions')
+    const response = await app.apolloProvider?.defaultClient.query({ query: companyQuery })
+    const company = response?.data?.company
+
+    return { missions, company }
   }
 })
-export default class MissionIndex extends Vue {
-  company = {}
-  missions = []
-
-  async fetch() {
-    try {
-      this.missions = await this.$axios.$get('https://api.spacex.land/rest/missions')
-    } catch (e) {
-      console.log(e)
-    }
-    
-    try {
-      const response = await this.$apollo.query({ query: companyQuery })
-      this.company = response.data.company
-    } catch (e) {
-      console.log(e)
-    }
-  }
-}
+export default class MissionIndex extends Vue {}
 </script>
