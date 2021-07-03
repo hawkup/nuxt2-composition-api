@@ -1,10 +1,12 @@
 <template>
   <div>
-    This is mission detail page {{ status }}
-    {{ mission }}
-    <button @click="open">open</button>
-    <button @click="close">close</button>
-    {{ company }}
+    <p>This is mission detail page {{ status }}</p>
+    <p>{{ company }}</p>
+    <p>{{ mission }}</p>
+    <div>
+      <button @click="open">open</button>
+      <button @click="close">close</button>
+    </div>
   </div>
 </template>
 

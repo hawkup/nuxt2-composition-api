@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <p>Ship</p>
+  <div class="flex">
+    <p> Ship </p>
     <NuxtLink :to="{ name: 'ship-id', params: { id: data.id } }">Open</NuxtLink>
   </div>
 </template>

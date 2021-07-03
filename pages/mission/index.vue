@@ -1,10 +1,14 @@
 <template>
   <div>
-    This is mission page {{ status }}
-    <Mission v-for="mission in missions" :key="mission.id" :data="mission" />
-    <button @click="open">open</button>
-    <button @click="close">close</button>
-    {{ company }}
+    <p>This is mission page {{ status }}</p>
+    <p>{{ company }}</p>
+    <div>
+      <Mission v-for="mission in missions" :key="mission.id" :data="mission" />
+    </div>
+    <div>
+      <button @click="open">open</button>
+      <button @click="close">close</button>
+    </div>
   </div>
 </template>
 

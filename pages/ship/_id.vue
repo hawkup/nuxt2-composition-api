@@ -1,10 +1,12 @@
 <template>
   <div>
-    This is ship detail page {{ status }}
-    {{ ship }}
-    <button @click="open">open</button>
-    <button @click="close">close</button>
-    {{ company }}
+    <p>This is ship detail page {{ status }}</p>
+    <p>{{ company }}</p>
+    <p>{{ ship }}</p>
+    <div>
+      <button @click="open">open</button>
+      <button @click="close">close</button>
+    </div>
   </div>
 </template>
 

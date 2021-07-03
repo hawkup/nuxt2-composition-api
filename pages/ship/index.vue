@@ -1,10 +1,14 @@
 <template>
   <div>
-    This is ship page {{ status }}
-    <Ship v-for="ship in ships" :key="ship.id" :data="ship" />
-    <button @click="open">open</button>
-    <button @click="close">close</button>
-    {{ company }}
+    <p>This is ship page {{ status }}</p>
+    <p>{{ company }}</p>
+    <div>
+      <Ship v-for="ship in ships" :key="ship.id" :data="ship" />
+    </div>
+    <div>
+      <button @click="open">open</button>
+      <button @click="close">close</button>
+    </div>
   </div>
 </template>
 
