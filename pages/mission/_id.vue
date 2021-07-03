@@ -4,25 +4,32 @@
     <p>{{ company }}</p>
     <p>{{ mission }}</p>
     <div>
-      <button @click="open">open</button>
-      <button @click="close">close</button>
+      <button @click="toggleStatus(true)">open</button>
+      <button @click="toggleStatus(false)">close</button>
+      <button @click="toggleStatus">toggle</button>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
+import { useToggle } from '@vueuse/core'
+
 import companyQuery from '~/graphql/queries/company.gql'
 
-@Component
+@Component({
+  setup() {
+    const [status, toggleStatus] = useToggle()
+
+    return {
+      status,
+      toggleStatus
+    }
+  }
+})
 export default class MissionDetail extends Vue {
   company = {}
   mission = {}
-  status = false
-
-  setup() {
-    console.log('setup')
-  }
 
   async fetch() {
     const id = this.$route.params.id
@@ -39,14 +46,6 @@ export default class MissionDetail extends Vue {
     } catch (e) {
       console.log(e)
     }
-  }
-
-  open() {
-    this.status = true
-  }
-
-  close() {
-    this.status = false
   }
 }
 </script>

@@ -4,26 +4,33 @@
     <p>{{ company }}</p>
     <p>{{ ship }}</p>
     <div>
-      <button @click="open">open</button>
-      <button @click="close">close</button>
+      <button @click="toggleStatus(true)">open</button>
+      <button @click="toggleStatus(false)">close</button>
+      <button @click="toggleStatus">toggle</button>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
+import { useToggle } from '@vueuse/core'
+
 import companyQuery from '~/graphql/queries/company.gql'
 
 export default defineComponent({
   data() {
     return {
       company: {},
-      ship: {},
-      status: false
+      ship: {}
     }
   },
   setup() {
-    console.log('setup')
+    const [status, toggleStatus] = useToggle()
+
+    return {
+      status,
+      toggleStatus
+    }
   },
   async fetch() {
     const id = this.$route.params.id
@@ -39,14 +46,6 @@ export default defineComponent({
       this.company = response.data.company
     } catch (e) {
       console.log(e)
-    }
-  },
-  methods: {
-    open() {
-      this.status = true
-    },
-    close() {
-      this.status = false
     }
   }
 })
