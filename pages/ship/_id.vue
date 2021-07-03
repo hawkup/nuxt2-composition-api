@@ -9,16 +9,19 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { defineComponent } from '@nuxtjs/composition-api'
 import companyQuery from '~/graphql/queries/company.gql'
 
-export default Vue.extend({
+export default defineComponent({
   data() {
     return {
       company: {},
       ship: {},
       status: false
     }
+  },
+  setup() {
+    console.log('setup')
   },
   async fetch() {
     const id = this.$route.params.id

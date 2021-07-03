@@ -27,7 +27,8 @@
       "@nuxt/types",
       "@types/node",
       "@nuxtjs/axios",
-      "vue-apollo/types"
+      "vue-apollo/types",
+      "@vue/composition-api"
     ]
   },
   "exclude": [

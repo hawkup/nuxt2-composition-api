@@ -18,6 +18,10 @@ export default class MissionDetail extends Vue {
   mission = {}
   status = false
 
+  setup() {
+    console.log('setup')
+  }
+
   async fetch() {
     const id = this.$route.params.id
 

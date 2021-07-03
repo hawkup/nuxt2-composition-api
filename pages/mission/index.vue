@@ -18,6 +18,10 @@ export default class MissionIndex extends Vue {
   missions = []
   status = false
 
+  setup() {
+    console.log('setup')
+  }
+
   async fetch() {
     try {
       this.missions = await this.$axios.$get('https://api.spacex.land/rest/missions')
