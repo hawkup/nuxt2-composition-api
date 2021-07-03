@@ -1,0 +1,8 @@
+query {
+  company {
+    founded
+    founder
+    name
+    summary
+  }
+}
