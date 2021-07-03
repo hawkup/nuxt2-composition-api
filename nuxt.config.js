@@ -1,3 +1,5 @@
+import { PageCacheMode } from 'nuxt-multi-cache'
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -39,7 +41,8 @@ export default {
   modules: [
     '@nuxtjs/apollo',
     '@nuxtjs/axios',
-    'vue-toastification/nuxt'
+    'vue-toastification/nuxt',
+    'nuxt-multi-cache'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -51,6 +54,24 @@ export default {
       default: {
         httpEndpoint: 'https://api.spacex.land/graphql',
       }
+    }
+  },
+
+  routeCache: {
+    enabled: true,
+    debug: true,
+    outputDir: '~/cache',
+    server: {
+      auth: {
+        username: 'admin',
+        password: 'hunter2'
+      }
+    },
+    pageCache: {
+      enabled: true
+    },
+    dataCache: {
+      enabled: true
     }
   }
 }

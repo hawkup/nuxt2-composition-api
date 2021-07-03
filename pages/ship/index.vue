@@ -45,12 +45,22 @@ export default defineComponent({
       clearToasts
     }
   },
-  async fetch() {
+  async asyncData({ app }) {
     try {
-      this.ships = await this.$axios.$get('https://api.spacex.land/rest/ships')
+      const shipsCache = await app.$cache.data.get('ship_index')
+      if (shipsCache) {
+        return { ships: shipsCache }
+      }
+
+      const ships = await app.$axios.$get('https://api.spacex.land/rest/ships')
+      app.$cache.data.set('ship_index', ships)
+
+      return { ships }
     } catch (e) {
       console.log(e)
     }
+  },
+  async fetch() {
 
     try {
       const response = await this.$apollo.query({ query: companyQuery })
