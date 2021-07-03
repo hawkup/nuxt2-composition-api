@@ -44,6 +44,8 @@ export default defineComponent({
     }
   },
   async fetch() {
+    this.$cache.route.setCacheable()
+
     const id = this.$route.params.id
 
     try {
