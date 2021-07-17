@@ -1,4 +1,6 @@
-export default {
+module.exports = {
+  ssr: true,
+  telemetry: false,
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'nuxt2-composition-api',
