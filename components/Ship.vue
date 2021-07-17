@@ -1,8 +1,10 @@
 <template>
-  <div class="flex">
-    <p> Ship </p>
-    <NuxtLink :to="{ name: 'ship-id', params: { id: data.id } }">Open</NuxtLink>
-  </div>
+  <NuxtLink :to="{ name: 'ship-id', params: { id: data.id } }">
+    <div>
+      <img :src="data.image" width="300" />
+      <span>{{ data.name }}</span>
+    </div>
+  </NuxtLink>
 </template>
 
 <script lang="ts">

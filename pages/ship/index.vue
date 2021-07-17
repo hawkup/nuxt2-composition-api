@@ -1,16 +1,18 @@
 <template>
   <div>
     <p>This is ship page {{ status }}</p>
-    <p>{{ company }}</p>
-    <div>
-      <Ship v-for="ship in ships" :key="ship.id" :data="ship" />
-    </div>
+    <p>{{ company.founder }}</p>
+    <p>{{ company.name }}</p>
+    <p>{{ company.summary }}</p>
     <div>
       <button @click="toggleStatus(true)">open</button>
       <button @click="toggleStatus(false)">close</button>
       <button @click="toggleStatus">toggle</button>
       <button @click="showToast">show toast</button>
       <button @click="clearToasts">clear toast</button>
+    </div>
+    <div class="grid grid-cols-3 gap-4">
+      <Ship v-for="ship in ships" :key="ship.id" :data="ship" />
     </div>
   </div>
 </template>
