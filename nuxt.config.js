@@ -55,7 +55,7 @@ export default {
     }
   },
 
-  routeCache: {
+  multiCache: {
     enabled: true,
     debug: true,
     outputDir: '~/cache',
