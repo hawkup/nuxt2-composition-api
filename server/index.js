@@ -1,7 +1,7 @@
 
 const { Nuxt, Builder } = require('nuxt')
 const fastify = require('fastify')({
-  logger: true
+  logger: false
 })
 
 const config = require('../nuxt.config')

@@ -20,6 +20,8 @@
     "nuxt": "^2.15.7",
     "nuxt-multi-cache": "^1.1.0",
     "nuxt-property-decorator": "^2.9.1",
+    "vue-loading-skeleton": "^1.1.9",
+    "vue-scroll-loader": "^2.2.0",
     "vue-toastification": "^1.7.11"
   },
   "devDependencies": {
