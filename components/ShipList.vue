@@ -2,6 +2,7 @@
   <div>
     <!-- if you would like to use `fetch` on server. Don't use <client-only /> for the root div -->
     <client-only>
+      <SlideShip :ships="ships" />
       <div v-if="$fetchState.pending" class="grid grid-cols-1 md:gap-4 md:grid-cols-3">
         <PuSkeleton height="200px" />
         <PuSkeleton height="200px" />
@@ -67,6 +68,11 @@ export default defineComponent({
     }
   },
   methods: {
+    move(index: any) {
+      const flicking: any = this.$refs.flicking
+      flicking.moveTo(index)
+      console.log(this.$refs.flicking)
+    },
     async getShips() {
       this.loadingStatus = 'pending'
       const ships = await this.$nuxt.$axios.$get('https://api.spacex.land/rest/ships', { params: { limit: this.limit, offset: this.offset } })
