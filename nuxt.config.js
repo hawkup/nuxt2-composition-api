@@ -37,7 +37,8 @@ module.exports = {
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
     '@nuxtjs/composition-api/module',
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/pwa'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -75,6 +76,13 @@ module.exports = {
     },
     dataCache: {
       enabled: true
+    }
+  },
+
+  pwa: {
+    manifest: {
+      name: 'My Awesome App',
+      lang: 'en'
     }
   }
 }
