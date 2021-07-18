@@ -24,6 +24,7 @@ module.exports = {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    { src: '~/plugins/flicking.js', mode: 'client' },
     { src: '~/plugins/vue-loading-skeleton.js', mode: 'client' },
     { src: '~/plugins/vue-scroll-loader.js', mode: 'client' }
   ],
