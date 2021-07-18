@@ -2,7 +2,7 @@
   <div>
     <!-- if you would like to use `fetch` on server. Don't use <client-only /> for the root div -->
     <client-only>
-      <div v-if="$fetchState.pending" class="grid grid-cols-3 gap-4">
+      <div v-if="$fetchState.pending" class="grid grid-cols-1 md:gap-4 md:grid-cols-3">
         <PuSkeleton height="200px" />
         <PuSkeleton height="200px" />
         <PuSkeleton height="200px" />
@@ -14,11 +14,11 @@
         Error
       </div>
       <div v-else>
-        <div class="grid grid-cols-3 gap-4">
+        <div class="grid grid-cols-1 md:gap-4 md:grid-cols-3">
           <Ship v-for="ship in ships" :key="ship.id" :data="ship" />
         </div>
         <scroll-loader :loader-method="loadMoreShips" :loader-disable="loadingStatus === 'pending' || loadingStatus === 'rejected' || loadingStatus === 'done'">
-          <div class="grid grid-cols-3 gap-4">
+          <div class="grid grid-cols-1 md:gap-4 md:grid-cols-3">
             <PuSkeleton height="200px" />
             <PuSkeleton height="200px" />
             <PuSkeleton height="200px" />
@@ -39,7 +39,7 @@ export default defineComponent({
   data() {
     return {
       ships: [],
-      limit: 3,
+      limit: 12,
       offset: 0,
       loadingStatus: 'idle' as 'idle' | 'pending' | 'resolved' | 'rejected' | 'done'
     }

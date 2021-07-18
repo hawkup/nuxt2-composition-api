@@ -1,7 +1,10 @@
 <template>
   <NuxtLink :to="{ name: 'ship-id', params: { id: data.id } }">
     <div>
-      <img :src="data.image" width="300" />
+      <picture>
+        <source media="(min-width: 800px)" :srcset="data.image">
+        <img :src="data.image" :alt="data.name" loading="lazy" width="300" height="300">
+      </picture>
       <span>{{ data.name }}</span>
     </div>
   </NuxtLink>
