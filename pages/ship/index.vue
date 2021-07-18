@@ -3,13 +3,14 @@
     <p>{{ company.founder }}</p>
     <p>{{ company.name }}</p>
     <p>{{ company.summary }}</p>
-
+    <ShipResult />
     <ShipList />
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@nuxtjs/composition-api'
+import { computed, defineComponent } from '@nuxtjs/composition-api'
+
 import companyQuery from '~/graphql/queries/company.gql'
 
 export default defineComponent({
