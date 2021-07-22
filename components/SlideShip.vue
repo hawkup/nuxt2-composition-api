@@ -11,6 +11,8 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import { Flicking } from '@egjs/vue-flicking'
+import '@egjs/vue-flicking/dist/flicking.css'
 
 export default Vue.extend({
   props: {
@@ -18,6 +20,9 @@ export default Vue.extend({
       type: Array,
       required: true
     }
+  },
+  components: {
+    Flicking
   },
   data() {
     return {
