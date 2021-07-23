@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 module.exports = {
   ssr: true,
   telemetry: false,
@@ -39,7 +41,8 @@ module.exports = {
     '@nuxtjs/dotenv',
     '@nuxtjs/composition-api/module',
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxtjs/web-vitals'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -86,5 +89,9 @@ module.exports = {
       name: 'My Awesome App',
       lang: 'en'
     }
+  },
+
+  googleAnalytics: {
+    id: process.env.GOOGLE_ANALYRICS_ID
   }
 }
