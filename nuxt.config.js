@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 module.exports = {
   ssr: true,
   telemetry: false,
@@ -87,5 +89,9 @@ module.exports = {
       name: 'My Awesome App',
       lang: 'en'
     }
+  },
+
+  googleAnalytics: {
+    id: process.env.GOOGLE_ANALYRICS_ID
   }
 }
