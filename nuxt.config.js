@@ -39,7 +39,8 @@ module.exports = {
     '@nuxtjs/dotenv',
     '@nuxtjs/composition-api/module',
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxtjs/web-vitals'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
