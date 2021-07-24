@@ -55,7 +55,8 @@ module.exports = {
     'vue-toastification/nuxt',
     'nuxt-multi-cache',
     'nuxt-feature-toggle',
-    '@nuxtjs/dayjs'
+    '@nuxtjs/dayjs',
+    '@nuxtjs/proxy'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -106,6 +107,10 @@ module.exports = {
 
   dayjs: {
     locales: ['en', 'th']
+  },
+
+  proxy: {
+    '/rest': 'https://api.spacex.land'
   },
 
   publicRuntimeConfig: {
