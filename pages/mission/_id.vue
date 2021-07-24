@@ -8,6 +8,22 @@
     <p>{{ company }}</p>
     <p>{{ mission }}</p>
     <div>
+      <p>$device.isDesktop: {{ $device.isDesktop }}</p>
+      <p>$device.isMobile: {{ $device.isMobile }}</p>
+      <p>$device.isTablet: {{ $device.isTablet }}</p>
+      <p>$device.isMobileOrTablet: {{ $device.isMobileOrTablet }}</p>
+      <p>$device.isDesktopOrTablet: {{ $device.isDesktopOrTablet }}</p>
+      <p>$device.isIos: {{ $device.isIos }}</p>
+      <p>$device.isWindows: {{ $device.isWindows }}</p>
+      <p>$device.isMacOS: {{ $device.isMacOS }}</p>
+      <p>$device.isAndroid: {{ $device.isAndroid }}</p>
+      <p>$device.isFirefox: {{ $device.isFirefox }}</p>
+      <p>$device.isEdge: {{ $device.isEdge }}</p>
+      <p>$device.isChrome: {{ $device.isChrome }}</p>
+      <p>$device.isSamsung: {{ $device.isSamsung }}</p>
+      <p>$device.isCrawler: {{ $device.isCrawler }}</p>
+    </div>
+    <div>
       <button @click="toggleStatus(true)">open</button>
       <button @click="toggleStatus(false)">close</button>
       <button @click="toggleStatus">toggle</button>
