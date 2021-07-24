@@ -1,8 +1,10 @@
 <template>
   <div>
-    <p>{{ company.founder }}</p>
-    <p>{{ company.name }}</p>
-    <p>{{ company.summary }}</p>
+    <feature-toggle name="company" :value="true">
+      <p>{{ company.founder }}</p>
+      <p>{{ company.name }}</p>
+      <p>{{ company.summary }}</p>
+    </feature-toggle>
     <ShipResult />
     <ShipList />
   </div>

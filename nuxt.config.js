@@ -1,4 +1,5 @@
 require('dotenv').config()
+const yn = require('yn')
 
 module.exports = {
   ssr: true,
@@ -26,6 +27,7 @@ module.exports = {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~/plugins/feature-toggle.js',
     '~/plugins/portal.js',
     { src: '~/plugins/vue-loading-skeleton.js', mode: 'client' },
     { src: '~/plugins/vue-scroll-loader.js', mode: 'client' }
@@ -50,7 +52,8 @@ module.exports = {
     '@nuxtjs/apollo',
     '@nuxtjs/axios',
     'vue-toastification/nuxt',
-    'nuxt-multi-cache'
+    'nuxt-multi-cache',
+    'nuxt-feature-toggle'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -93,5 +96,14 @@ module.exports = {
 
   googleAnalytics: {
     id: process.env.GOOGLE_ANALYRICS_ID
+  },
+
+  publicRuntimeConfig: {
+    featureToggle: {
+      queryString: process.env.NODE_ENV === 'development',
+      toggles: {
+        company: yn(process.env.FEATURE_ENABLE_COMPANY)
+      }
+    }
   }
 }
