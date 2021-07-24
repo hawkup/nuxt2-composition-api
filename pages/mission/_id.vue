@@ -2,6 +2,7 @@
   <div>
     <p>{{ $dateFns.format(new Date(), 'MM/dd/yy iii EEEE') }}</p>
     <p>{{ $dateFns.format(new Date(), 'MM/dd/yyyy iii EEEE', { locale: 'th' }) }}</p>
+    <p>{{ $dayjs().format('YYYY/MM/DD') }}</p>
     <p>This is mission detail page {{ status }}</p>
     <p>{{ company }}</p>
     <p>{{ mission }}</p>

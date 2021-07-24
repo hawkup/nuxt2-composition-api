@@ -54,7 +54,8 @@ module.exports = {
     '@nuxtjs/axios',
     'vue-toastification/nuxt',
     'nuxt-multi-cache',
-    'nuxt-feature-toggle'
+    'nuxt-feature-toggle',
+    '@nuxtjs/dayjs'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -100,6 +101,10 @@ module.exports = {
   },
 
   dateFns: {
+    locales: ['en', 'th']
+  },
+
+  dayjs: {
     locales: ['en', 'th']
   },
 
