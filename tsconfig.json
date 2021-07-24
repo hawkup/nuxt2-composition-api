@@ -28,7 +28,8 @@
       "@types/node",
       "@nuxtjs/axios",
       "vue-apollo/types",
-      "@vue/composition-api"
+      "@vue/composition-api",
+      "@nuxtjs/date-fns"
     ]
   },
   "exclude": [
