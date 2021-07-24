@@ -29,6 +29,7 @@ module.exports = {
   plugins: [
     '~/plugins/feature-toggle.js',
     '~/plugins/portal.js',
+    { src:'~/plugins/gtm.js', mode: 'client' },
     { src: '~/plugins/vue-loading-skeleton.js', mode: 'client' },
     { src: '~/plugins/vue-scroll-loader.js', mode: 'client' }
   ],
@@ -57,7 +58,8 @@ module.exports = {
     'nuxt-multi-cache',
     'nuxt-feature-toggle',
     '@nuxtjs/dayjs',
-    '@nuxtjs/proxy'
+    '@nuxtjs/proxy',
+    '@nuxtjs/gtm'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -114,12 +116,20 @@ module.exports = {
     '/rest': 'https://api.spacex.land'
   },
 
+  gtm: {
+    enabled: true,
+    id: process.env.GOOGLE_TAG_MANAGER_ID
+  },
+
   publicRuntimeConfig: {
     featureToggle: {
       queryString: process.env.NODE_ENV === 'development',
       toggles: {
         company: yn(process.env.FEATURE_ENABLE_COMPANY)
       }
+    },
+    gtm: {
+      id: process.env.GOOGLE_TAG_MANAGER_ID
     }
   }
 }
