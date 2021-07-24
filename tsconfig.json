@@ -29,7 +29,8 @@
       "@nuxtjs/axios",
       "vue-apollo/types",
       "@vue/composition-api",
-      "@nuxtjs/date-fns"
+      "@nuxtjs/date-fns",
+      "@nuxtjs/dayjs"
     ]
   },
   "exclude": [
