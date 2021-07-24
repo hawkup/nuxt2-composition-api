@@ -1,5 +1,8 @@
 <template>
-  <div v-html="contentHtml"></div>
+  <div>
+    <NuxtLink :to="{ name: 'history' }">Go to History</NuxtLink>
+    <div v-html="contentHtml"></div>
+  </div>
 </template>
 
 <script lang="ts">

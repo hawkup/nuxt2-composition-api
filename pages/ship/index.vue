@@ -1,5 +1,6 @@
 <template>
   <div>
+    <NuxtLink :to="{ name: 'history' }">Go to History</NuxtLink>
     <feature-toggle name="company" :value="true">
       <p>{{ company.founder }}</p>
       <p>{{ company.name }}</p>
@@ -20,6 +21,9 @@ export default defineComponent({
     return {
       company: {}
     }
+  },
+  backupData() {
+    return this.$data
   },
   fetchOnServer: true,
   async fetch() {

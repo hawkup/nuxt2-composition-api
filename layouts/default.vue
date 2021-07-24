@@ -1,7 +1,6 @@
 <template>
   <div>
-    <NuxtLink :to="{ name: 'history' }">Go to History</NuxtLink>
-    <Tutorial/>
+    <Nuxt />
   </div>
 </template>
 
