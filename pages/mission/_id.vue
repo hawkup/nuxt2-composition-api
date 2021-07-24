@@ -3,6 +3,7 @@
     <p>{{ $dateFns.format(new Date(), 'MM/dd/yy iii EEEE') }}</p>
     <p>{{ $dateFns.format(new Date(), 'MM/dd/yyyy iii EEEE', { locale: 'th' }) }}</p>
     <p>{{ $dayjs().format('YYYY/MM/DD') }}</p>
+    <p>{{ now }}</p>
     <p>This is mission detail page {{ status }}</p>
     <p>{{ company }}</p>
     <p>{{ mission }}</p>
@@ -20,6 +21,7 @@
 import { Component, Vue } from 'nuxt-property-decorator'
 import { useToggle } from '@vueuse/core'
 import { provideToast, useToast } from 'vue-toastification/composition'
+import { DateTime } from 'luxon'
 
 import companyQuery from '~/graphql/queries/company.gql'
 
@@ -44,6 +46,8 @@ import companyQuery from '~/graphql/queries/company.gql'
 export default class MissionDetail extends Vue {
   company = {}
   mission = {}
+
+  now = DateTime.fromISO('2014-08-06T13:07:04.054').toFormat('yyyy LLL dd')
 
   async fetch() {
     const id = this.$route.params.id
