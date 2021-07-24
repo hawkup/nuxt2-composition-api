@@ -44,7 +44,8 @@ module.exports = {
     '@nuxtjs/composition-api/module',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/pwa',
-    '@nuxtjs/web-vitals'
+    '@nuxtjs/web-vitals',
+    '@nuxtjs/date-fns'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -96,6 +97,10 @@ module.exports = {
 
   googleAnalytics: {
     id: process.env.GOOGLE_ANALYRICS_ID
+  },
+
+  dateFns: {
+    locales: ['en', 'th']
   },
 
   publicRuntimeConfig: {
