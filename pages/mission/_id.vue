@@ -81,5 +81,9 @@ export default class MissionDetail extends Vue {
       console.log(e)
     }
   }
+
+  mounted() {
+    this.$gtm.push({ event: 'myEvent' })
+  }
 }
 </script>
