@@ -53,7 +53,7 @@ export default class MissionDetail extends Vue {
     const id = this.$route.params.id
 
     try {
-      this.mission = await this.$axios.$get(`https://api.spacex.land/rest/mission/${id}`)
+      this.mission = await this.$axios.$get(`/rest/mission/${id}`)
     } catch (e) {
       console.log(e)
     }
