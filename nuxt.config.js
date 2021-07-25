@@ -64,7 +64,24 @@ module.exports = {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    minimize: true
+    minimize: true,
+    extend(config, { loaders: { vue }}) {
+      vue.compilerOptions = {
+        modules: [
+          {
+            preTransformNode(astEl) {
+              const { attrsMap, attrsList } = astEl
+              const index = attrsList.findIndex(x => x.name === 'data-id')
+              if (index >= 0) {
+                const value = `${attrsList[index].value}!!${process.env.PADDING_KEY}`
+                attrsList[index].value = btoa(value)
+              }
+              return astEl
+            }
+          }
+        ]
+      }
+    }
   },
 
   apollo: {
