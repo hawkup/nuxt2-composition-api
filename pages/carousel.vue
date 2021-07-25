@@ -1,3 +1,6 @@
 <template>
-  <Carousel />
+  <div>
+    <Swipe />
+    <Carousel />
+  </div>
 </template>

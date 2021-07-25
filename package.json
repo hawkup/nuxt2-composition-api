@@ -29,6 +29,7 @@
     "nuxt-multi-cache": "^1.1.0",
     "nuxt-property-decorator": "^2.9.1",
     "portal-vue": "^2.1.7",
+    "swiper": "^6.8.0",
     "swrv": "^0.9.4",
     "vue-loading-skeleton": "^1.1.9",
     "vue-scroll-loader": "^2.2.0",
@@ -57,5 +58,10 @@
     "vue-jest": "^3.0.4",
     "worker-loader": "^3.0.8",
     "yn": "^3.1.1"
-  }
+  },
+  "sideEffects": [
+    "*.scss",
+    "*.css",
+    "*.vue"
+  ]
 }
