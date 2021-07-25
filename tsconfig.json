@@ -31,7 +31,8 @@
       "@vue/composition-api",
       "@nuxtjs/date-fns",
       "@nuxtjs/dayjs",
-      "@types/luxon"
+      "@types/luxon",
+      "@types/marked"
     ]
   },
   "exclude": [

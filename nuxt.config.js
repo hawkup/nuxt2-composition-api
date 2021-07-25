@@ -29,7 +29,8 @@ module.exports = {
   plugins: [
     '~/plugins/feature-toggle.js',
     '~/plugins/portal.js',
-    { src:'~/plugins/gtm.js', mode: 'client' },
+    { src: '~/plugins/inject-ww.js', mode: 'client' },
+    { src: '~/plugins/gtm.js', mode: 'client' },
     { src: '~/plugins/vue-loading-skeleton.js', mode: 'client' },
     { src: '~/plugins/vue-scroll-loader.js', mode: 'client' }
   ],
@@ -65,7 +66,19 @@ module.exports = {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     minimize: true,
-    extend(config, { loaders: { vue }}) {
+    extend(config, { isClient, loaders: { vue }}) {
+      if (isClient) {
+        config.module.rules.push({
+          test: /\.md$/,
+          use: { loader: 'raw-loader' }
+        })
+      }
+
+      config.module.rules.push({
+        test: /\.worker\.js$/,
+        use: { loader: 'worker-loader' }
+      })
+
       vue.compilerOptions = {
         modules: [
           {
