@@ -1,5 +1,6 @@
 <template>
   <div>
+    <NuxtLink :to="{ name: 'history' }">Go to History</NuxtLink>
     <p>This is mission page {{ status }}</p>
     <p>{{ company }}</p>
     <div>

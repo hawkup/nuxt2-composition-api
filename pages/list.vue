@@ -1,5 +1,6 @@
 <template>
   <ul>
+    <NuxtLink :to="{ name: 'history' }">Go to History</NuxtLink>
     <li v-for="item in data" :key="item.id">{{ item.id }}</li>
   </ul>
 </template>

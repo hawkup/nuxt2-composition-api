@@ -1,5 +1,6 @@
 <template>
   <div>
+    <NuxtLink :to="{ name: 'history' }">Go to History</NuxtLink>
     <p>{{ $dateFns.format(new Date(), 'MM/dd/yy iii EEEE') }}</p>
     <p>{{ $dateFns.format(new Date(), 'MM/dd/yyyy iii EEEE', { locale: 'th' }) }}</p>
     <p>{{ $dayjs().format('YYYY/MM/DD') }}</p>

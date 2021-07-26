@@ -60,7 +60,8 @@ module.exports = {
     'nuxt-feature-toggle',
     '@nuxtjs/dayjs',
     '@nuxtjs/proxy',
-    '@nuxtjs/gtm'
+    '@nuxtjs/gtm',
+    'nuxt-history-state'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -116,7 +117,7 @@ module.exports = {
       }
     },
     pageCache: {
-      enabled: true
+      enabled: false
     },
     dataCache: {
       enabled: true
@@ -127,6 +128,9 @@ module.exports = {
     manifest: {
       name: 'My Awesome App',
       lang: 'en'
+    },
+    workbox: {
+      enabled: false
     }
   },
 
@@ -147,7 +151,7 @@ module.exports = {
   },
 
   gtm: {
-    enabled: true,
+    enabled: false,
     id: process.env.GOOGLE_TAG_MANAGER_ID
   },
 
@@ -161,5 +165,12 @@ module.exports = {
     gtm: {
       id: process.env.GOOGLE_TAG_MANAGER_ID
     }
+  },
+
+  historyState: {
+    maxHistoryLength: 50,
+    reloadable: false,
+    overrideDefaultScrollBehavior: true,
+    scrollingElements: '#scroll'
   }
 }

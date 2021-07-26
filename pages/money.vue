@@ -1,5 +1,6 @@
 <template>
   <div>
+    <NuxtLink :to="{ name: 'history' }">Go to History</NuxtLink>
     <pre>{{ price }}</pre>
     <pre>{{ shipping }}</pre>
     <pre>{{ total }}</pre>

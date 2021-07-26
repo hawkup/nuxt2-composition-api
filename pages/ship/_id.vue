@@ -1,5 +1,6 @@
 <template>
   <div>
+    <NuxtLink :to="{ name: 'history' }">Go to History</NuxtLink>
     <p>This is ship detail page {{ status }}</p>
     <p>{{ company }}</p>
     <p>{{ ship }}</p>
@@ -53,7 +54,7 @@ export default defineComponent({
     } catch (e) {
       console.log(e)
     }
-    
+
     try {
       const response = await this.$apollo.query({ query: companyQuery })
       this.company = response.data.company

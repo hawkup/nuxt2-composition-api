@@ -1,5 +1,6 @@
 <template>
   <div class="flex">
+    <NuxtLink :to="{ name: 'history' }">Go to History</NuxtLink>
     <p> Mission </p>
     <NuxtLink :to="{ name: 'mission-id', params: { id: data.id } }">Open</NuxtLink>
   </div>

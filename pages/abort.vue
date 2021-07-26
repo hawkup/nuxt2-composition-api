@@ -1,6 +1,7 @@
 <template>
   <client-only>
     <div>
+      <NuxtLink :to="{ name: 'history' }">Go to History</NuxtLink>
       <button @click="changeId('9D1B7E0')">9D1B7E0</button>
       <button @click="changeId('F4F83DE')">F4F83DE</button>
       <button @click="changeId('F3364BF')">F3364BF</button>
