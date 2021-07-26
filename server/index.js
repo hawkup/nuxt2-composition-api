@@ -23,7 +23,7 @@ async function start() {
     await builder.build()
   }
 
-  fastify.setNotFoundHandler(({ req }, { res }) => nuxt.render(req, res))
+  fastify.setNotFoundHandler((request, reply) => nuxt.render(request.raw, reply.raw))
 
   fastify.listen(port, host, (err, address) => {
     if (err) {
