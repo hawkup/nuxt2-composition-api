@@ -49,6 +49,9 @@
       />
     </section>
     <!-- https://cloudfour.com/thinks/responsive-images-101-part-5-sizes/#how-does-the-browser-select-the-correct-sizes-value -->
+    <!-- https://medium.com/@woutervanderzee/responsive-images-with-srcset-and-sizes-fc434845e948 -->
+    <!-- https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images -->
+    <!-- https://www.mydevice.io/ -->
     <section class="mb-12">
       <h1>img with srcset (width descriptors) and sizes (vw)</h1>
       <img
