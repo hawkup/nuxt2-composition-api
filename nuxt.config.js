@@ -70,13 +70,6 @@ module.exports = {
   build: {
     minimize: true,
     extend(config, { isClient, loaders: { vue }}) {
-      if (isClient) {
-        config.module.rules.push({
-          test: /\.md$/,
-          use: { loader: 'raw-loader' }
-        })
-      }
-
       config.module.rules.push({
         test: /\.worker\.js$/,
         use: { loader: 'worker-loader' }

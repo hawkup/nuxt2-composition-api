@@ -7,6 +7,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import content from 'raw-loader!~/static/example.md'
 
 export default Vue.extend({
   data() {
@@ -16,8 +17,6 @@ export default Vue.extend({
   },
   mounted() {
     const worker = this.$worker.createWorker()
-
-    const content = require('~/static/example.md').default
 
     worker.onmessage = ({ data }: { data: any}) => {
       this.contentHtml = data
