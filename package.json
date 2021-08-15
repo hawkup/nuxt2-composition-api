@@ -36,6 +36,7 @@
     "sanitize-html": "^2.4.0",
     "swiper": "^6.8.0",
     "swrv": "^0.9.4",
+    "v-lazy-component": "^2.0.0",
     "vue-loading-skeleton": "^1.1.9",
     "vue-scroll-loader": "^2.2.0",
     "vue-toastification": "^1.7.11"

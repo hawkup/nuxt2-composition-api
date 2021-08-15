@@ -31,6 +31,7 @@ module.exports = {
     '~/plugins/portal.js',
     { src: '~/plugins/inject-ww.js', mode: 'client' },
     { src: '~/plugins/gtm.js', mode: 'client' },
+    { src: '~/plugins/v-lazy-component.js', mode: 'client' },
     { src: '~/plugins/vue-loading-skeleton.js', mode: 'client' },
     { src: '~/plugins/vue-scroll-loader.js', mode: 'client' }
   ],
