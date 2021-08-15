@@ -33,7 +33,8 @@
       "@nuxtjs/dayjs",
       "@types/luxon",
       "@types/marked",
-      "@types/sanitize-html"
+      "@types/sanitize-html",
+      "@nuxtjs/sentry"
     ]
   },
   "exclude": [
