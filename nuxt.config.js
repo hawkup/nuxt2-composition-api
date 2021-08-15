@@ -62,7 +62,8 @@ module.exports = {
     '@nuxtjs/dayjs',
     '@nuxtjs/proxy',
     '@nuxtjs/gtm',
-    'nuxt-history-state'
+    'nuxt-history-state',
+    '@nuxtjs/sentry'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -173,5 +174,15 @@ module.exports = {
     reloadable: false,
     overrideDefaultScrollBehavior: true,
     scrollingElements: '#scroll'
+  },
+
+  sentry: {
+    dsn: process.env.SENTRY_DSN, // Enter your project's DSN here
+    // Additional Module Options go here
+    // https://sentry.nuxtjs.org/sentry/options
+    config: {
+      // Add native Sentry config here
+      // https://docs.sentry.io/platforms/javascript/guides/vue/configuration/options/
+    },
   }
 }
