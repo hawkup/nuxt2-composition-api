@@ -93,6 +93,37 @@ module.exports = {
     }
   },
 
+  transition: {
+    // ENTERING
+    beforeEnter(el) {
+      console.log('beforeEnter', el)
+    },
+    enter(el, done) {
+      console.log('enter', el)
+      done()
+    },
+    afterEnter(el) {
+      console.log('afterEnter', el)
+    },
+    enterCancelled(el) {
+      console.log('enterCancelled', el)
+    },
+    // LEAVING
+    beforeLeave(el) {
+      console.log('beforeLeave', el)
+    },
+    leave(el, done) {
+      console.log('leave', el)
+      done()
+    },
+    afterLeave(el) {
+      console.log('afterLeave', el)
+    },
+    leaveCancelled(el) {
+      console.log('leaveCancelled', el)
+    }
+  },
+
   apollo: {
     clientConfigs: {
       default: {
