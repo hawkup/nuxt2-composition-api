@@ -34,6 +34,12 @@ export default defineComponent({
       console.log(e)
     }
   },
+  mounted() {
+    this.$nextTick(() => {
+      this.$nuxt.$loading.start()
+      setTimeout(() => this.$nuxt.$loading.finish(), 2000)
+    })
+  },
   activated() {
     if (this.$fetchState.timestamp <= Date.now() - 60000) {
       this.$fetch()

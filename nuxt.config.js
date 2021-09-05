@@ -93,6 +93,8 @@ module.exports = {
     }
   },
 
+  loading: '~/components/Loading.vue',
+
   transition: {
     // ENTERING
     beforeEnter(el) {
