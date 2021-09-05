@@ -69,6 +69,9 @@
     "worker-loader": "^3.0.8",
     "yn": "^3.1.1"
   },
+  "engines": {
+    "node": "16.x"
+  },
   "sideEffects": [
     "*.scss",
     "*.css",
