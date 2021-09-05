@@ -2,6 +2,8 @@
   <nuxt-child keep-alive />
 </template>
 
-<script>
-console.log('chunk layout')
+<script lang="ts">
+import Vue from 'vue'
+
+export default Vue.extend({})
 </script>
