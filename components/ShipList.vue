@@ -2,7 +2,6 @@
   <div>
     <!-- if you would like to use `fetch` on server. Don't use <client-only /> for the root div -->
     <client-only>
-      <LazySlideShip :ships="ships" />
       <div v-if="$fetchState.pending" class="grid grid-cols-1 md:gap-4 md:grid-cols-3">
         <PuSkeleton height="200px" />
         <PuSkeleton height="200px" />
@@ -29,6 +28,7 @@
           </div>
         </scroll-loader>
       </div>
+      <LazySlideShip :ships="ships" />
     </client-only>
   </div>
 </template>
