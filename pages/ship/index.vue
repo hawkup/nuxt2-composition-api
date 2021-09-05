@@ -1,13 +1,13 @@
 <template>
   <div>
     <NuxtLink :to="{ name: 'history' }">Go to History</NuxtLink>
+    <ShipList />
     <feature-toggle name="company" :value="true">
       <p>{{ company.founder }}</p>
       <p>{{ company.name }}</p>
       <p>{{ company.summary }}</p>
     </feature-toggle>
     <ShipResult />
-    <ShipList />
   </div>
 </template>
 
