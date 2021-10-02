@@ -1,11 +1,17 @@
 <template>
-  <LazyHydrate never>
-    <div>
+  <div>
+    <LazyHydrate never>
       <h1>Hydrate</h1>
-      <Mission v-for="mission in missions" :key="mission.id" :data="mission" />
+    </LazyHydrate>
+    <LazyHydrate when-idle>
+      <div>
+        <Mission v-for="mission in missions" :key="mission.id" :data="mission" />
+      </div>
+    </LazyHydrate>
+    <LazyHydrate when-idle>
       <ShipList />
-    </div>
-  </LazyHydrate>
+    </LazyHydrate>
+  </div>
 </template>
 
 <script>
