@@ -5,7 +5,7 @@
     <Mission v-for="mission in missions" :key="mission.id" :data="mission" />
     <Mission v-for="mission in missions" :key="mission.id" :data="mission" />
     <Mission v-for="mission in missions" :key="mission.id" :data="mission" />
-    <ShipList />
+    <LazyShipList />
   </div>
 </template>
 

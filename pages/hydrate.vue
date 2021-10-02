@@ -12,7 +12,7 @@
       </div>
     </LazyHydrate>
     <LazyHydrate when-visible>
-      <ShipList />
+      <LazyShipList />
     </LazyHydrate>
   </div>
 </template>
