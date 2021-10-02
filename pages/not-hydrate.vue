@@ -2,6 +2,9 @@
   <div>
     <h1>Not Hydrate</h1>
     <Mission v-for="mission in missions" :key="mission.id" :data="mission" />
+    <Mission v-for="mission in missions" :key="mission.id" :data="mission" />
+    <Mission v-for="mission in missions" :key="mission.id" :data="mission" />
+    <Mission v-for="mission in missions" :key="mission.id" :data="mission" />
     <ShipList />
   </div>
 </template>
