@@ -29,6 +29,7 @@ module.exports = {
   plugins: [
     '~/plugins/feature-toggle.js',
     '~/plugins/portal.js',
+    { src: '~/plugins/polyfill.js', mode: 'client' },
     { src: '~/plugins/inject-ww.js', mode: 'client' },
     { src: '~/plugins/gtm.js', mode: 'client' },
     { src: '~/plugins/v-lazy-component.js', mode: 'client' },
