@@ -18,6 +18,9 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
+    script: [
+      { hid: 'eruda', src: 'https://cdn.jsdelivr.net/npm/eruda', callback: () => { eruda.init() } }
     ]
   },
 
