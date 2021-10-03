@@ -17,7 +17,7 @@ export default function() {
     console.log('first polyfill broken')
     const script = document.createElement('script')
     script.type = 'text/javascript'
-    script.src = 'https://polyfill.io/v3/polyfill.min.js?features=Array.prototype.flat'
+    script.src = 'https://unpkg.com/array-flat-polyfill'
     document.head.appendChild(script)
   }
 }
