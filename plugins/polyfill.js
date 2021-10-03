@@ -20,4 +20,14 @@ export default function() {
     script.src = 'https://unpkg.com/array-flat-polyfill'
     document.head.appendChild(script)
   }
+
+  if (!Promise.allSettled) {
+    alert('not support Promise.allSettled')
+    const script = document.createElement('script')
+    script.type = 'text/javascript'
+    script.src = 'https://unpkg.com/@ungap/promise-all-settled'
+    document.head.appendChild(script)
+  } else {
+    alert('support Promise.allSettled')
+  }
 }
