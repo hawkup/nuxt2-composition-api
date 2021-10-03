@@ -1,5 +1,5 @@
 export default function() {
-  if (Array.prototype.flat) {
+  if (!Array.prototype.flat) {
     console.log('not support flat')
     setTimeout(() => {
       console.log('import flat polyfill')
