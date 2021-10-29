@@ -74,6 +74,9 @@
   "engines": {
     "node": "16.x"
   },
+  "volta": {
+    "node": "16.13.0"
+  },
   "sideEffects": [
     "*.scss",
     "*.css",
